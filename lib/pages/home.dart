@@ -1,16 +1,12 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:storekeeper/models/item_model.dart';
 import 'package:storekeeper/pages/createpage.dart';
 
 import '../controlleers/mystore.dart';
-import '../widgets/containers.dart';
 import '../widgets/exceptions.dart';
-import 'drawerx.dart';
 import 'itemview.dart';
 
 class Home extends StatelessWidget {

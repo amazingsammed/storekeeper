@@ -14,14 +14,15 @@ class SignupPage extends StatelessWidget {
   TextEditingController storename = TextEditingController();
   TextEditingController storelocation = TextEditingController();
 
+  SignupPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.grey_10,
       appBar: AppBar(
         backgroundColor: Colors.teal[700],
-        brightness: Brightness.dark,
-        title: Text('SignUp'),
+        title: Text('SignUp'), systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
@@ -251,61 +252,61 @@ class SignupPage extends StatelessWidget {
 
 class MyText {
   static TextStyle? display4(BuildContext context) {
-    return Theme.of(context).textTheme.headline1;
+    return Theme.of(context).textTheme.displayLarge;
   }
 
   static TextStyle? display3(BuildContext context) {
-    return Theme.of(context).textTheme.headline2;
+    return Theme.of(context).textTheme.displayMedium;
   }
 
   static TextStyle? display2(BuildContext context) {
-    return Theme.of(context).textTheme.headline3;
+    return Theme.of(context).textTheme.displaySmall;
   }
 
   static TextStyle? display1(BuildContext context) {
-    return Theme.of(context).textTheme.headline4;
+    return Theme.of(context).textTheme.headlineMedium;
   }
 
   static TextStyle? headline(BuildContext context) {
-    return Theme.of(context).textTheme.headline5;
+    return Theme.of(context).textTheme.headlineSmall;
   }
 
   static TextStyle? title(BuildContext context) {
-    return Theme.of(context).textTheme.headline6;
+    return Theme.of(context).textTheme.titleLarge;
   }
 
   static TextStyle medium(BuildContext context) {
-    return Theme.of(context).textTheme.subtitle1!.copyWith(
+    return Theme.of(context).textTheme.titleMedium!.copyWith(
           fontSize: 18,
         );
   }
 
   static TextStyle? subhead(BuildContext context) {
-    return Theme.of(context).textTheme.subtitle1;
+    return Theme.of(context).textTheme.titleMedium;
   }
 
   static TextStyle? body2(BuildContext context) {
-    return Theme.of(context).textTheme.bodyText1;
+    return Theme.of(context).textTheme.bodyLarge;
   }
 
   static TextStyle? body1(BuildContext context) {
-    return Theme.of(context).textTheme.bodyText2;
+    return Theme.of(context).textTheme.bodyMedium;
   }
 
   static TextStyle? caption(BuildContext context) {
-    return Theme.of(context).textTheme.caption;
+    return Theme.of(context).textTheme.bodySmall;
   }
 
   static TextStyle? button(BuildContext context) {
-    return Theme.of(context).textTheme.button!.copyWith(letterSpacing: 1);
+    return Theme.of(context).textTheme.labelLarge!.copyWith(letterSpacing: 1);
   }
 
   static TextStyle? subtitle(BuildContext context) {
-    return Theme.of(context).textTheme.subtitle2;
+    return Theme.of(context).textTheme.titleSmall;
   }
 
   static TextStyle? overline(BuildContext context) {
-    return Theme.of(context).textTheme.overline;
+    return Theme.of(context).textTheme.labelSmall;
   }
 }
 

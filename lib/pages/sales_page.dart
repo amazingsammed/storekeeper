@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +9,6 @@ import '../controlleers/mastercontroller.dart';
 import '../models/item_model.dart';
 import '../models/sales_model.dart';
 import '../widgets/exceptions.dart';
-import '../widgets/textfieldc.dart';
 
 class SalesPage extends StatelessWidget {
   MasterController controller = Get.put(MasterController());

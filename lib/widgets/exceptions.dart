@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -43,11 +42,6 @@ Future<String> getImageAndSave({required bool gallery}) async {
       : await _picker.pickImage(source: ImageSource.camera);
 
   File? file = File(image!.path);
-  // Check if an image was selected
-  if (file == null) {
-    print('No image was selected.');
-    return '';
-  }
 
   final directory = await getApplicationDocumentsDirectory();
 

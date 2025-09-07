@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 class ItemClass {
   int? id;
@@ -28,16 +27,16 @@ class ItemClass {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': this.id,
-      'image': this.image,
-      'name': this.name,
-      'price': this.price,
-      'actualprice': this.actualprice,
-      'avaliable': this.avaliable,
-      'total': this.total,
-      'date': this.date,
-      'categoryid': this.categoryid,
-      'storeid': this.storeid,
+      'id': id,
+      'image': image,
+      'name': name,
+      'price': price,
+      'actualprice': actualprice,
+      'avaliable': avaliable,
+      'total': total,
+      'date': date,
+      'categoryid': categoryid,
+      'storeid': storeid,
     };
   }
 

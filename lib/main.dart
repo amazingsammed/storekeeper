@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:storekeeper/authentication/signIn_page.dart';
-import 'package:storekeeper/pages/cart_page.dart';
 
-import 'master.dart';
 
 void main() {
   runApp(const MyApp());

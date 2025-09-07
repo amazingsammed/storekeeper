@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:storekeeper/controlleers/sqflite.dart';
 import 'package:storekeeper/models/sales_model.dart';
 
@@ -17,7 +16,7 @@ class MyStore extends Dbhelper {
 
 
 
-  sam(data, query) {
+  dynamic sam(data, query) {
     return data.toLowerCase().contains(query.toLowerCase());
   }
 
@@ -73,17 +72,17 @@ class MyStore extends Dbhelper {
     getAllItems();
   }
 
-  addSaleitem(Sales saleitem, int newavaliable, int? id) async {
+  Future<void> addSaleitem(Sales saleitem, int newavaliable, int? id) async {
     sales.clear();
     var dbClient = await db;
     await dbClient!.rawQuery(
         'UPDATE "main"."items" SET "avaliable" = $newavaliable WHERE rowid = $id');
-    await dbClient!.insert('sales', saleitem.toMap());
+    await dbClient.insert('sales', saleitem.toMap());
     getAllItems();
     getAllSales();
   }
 
-  addMoreSaleitem() {
+  void addMoreSaleitem() {
     cart_items.value.forEach((element) {
       int newavaliable = element.avaliable - element.quantity!;
       Sales saleitem = Sales(
@@ -108,7 +107,7 @@ class MyStore extends Dbhelper {
     return sales;
   }
 
-  additem(ItemClass items) {
+  void additem(ItemClass items) {
     if (cart_items.contains(items)) {
       Get.snackbar(
           "Item already added", "Increase the quantity in the cart view",
@@ -120,7 +119,7 @@ class MyStore extends Dbhelper {
     }
   }
 
-  decreaseItem(ItemClass items, index) {
+  void decreaseItem(ItemClass items, index) {
     if (cart_items.contains(items) && cart_items[index].quantity == 1) {
       Get.defaultDialog(
           middleText: 'Do you want to remove item from cart?',
@@ -137,12 +136,12 @@ class MyStore extends Dbhelper {
     }
   }
 
-  removeItem(ItemClass items) {
+  void removeItem(ItemClass items) {
     cart_items.remove(items);
     cart_items.refresh();
   }
 
-  additemcart(ItemClass items, index) {
+  void additemcart(ItemClass items, index) {
     if (cart_items.value[index].quantity! <= items.avaliable - 1) {
       cart_items[index].quantity = cart_items[index].quantity! + 1;
       print(cart_items[index].quantity);

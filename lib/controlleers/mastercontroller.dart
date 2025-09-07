@@ -1,4 +1,3 @@
-import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -13,7 +12,7 @@ class MasterController extends GetxController {
     tabIndex.value = index;
   }
 
-  changeSwitch(value) {
+  void changeSwitch(value) {
     switchvalue.value = !switchvalue.value;
   }
 }
