@@ -17,11 +17,11 @@ class Sales {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': this.id,
-      'price': this.price,
-      'quantity': this.quantity,
-      'total': this.total,
-      'date': this.date,
+      'id': id,
+      'price': price,
+      'quantity': quantity,
+      'total': total,
+      'date': date,
     };
   }
 

@@ -6,13 +6,13 @@ import 'package:storekeeper/authentication/signIn_page.dart';
 import '../pages/cart_page.dart';
 
 class SignupPage extends StatelessWidget {
-  TextEditingController email = TextEditingController();
-  TextEditingController username = TextEditingController();
-  TextEditingController password = TextEditingController();
-  TextEditingController retype_password = TextEditingController();
-  TextEditingController phone = TextEditingController();
-  TextEditingController storename = TextEditingController();
-  TextEditingController storelocation = TextEditingController();
+ final TextEditingController email = TextEditingController();
+ final TextEditingController username = TextEditingController();
+ final TextEditingController password = TextEditingController();
+ final TextEditingController retype_password = TextEditingController();
+ final TextEditingController phone = TextEditingController();
+ final TextEditingController storename = TextEditingController();
+ final TextEditingController storelocation = TextEditingController();
 
   SignupPage({super.key});
 
@@ -29,207 +29,205 @@ class SignupPage extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Align(
           alignment: Alignment.topCenter,
-          child: Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Container(height: 5),
-                Row(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(height: 5),
+              Row(
+                children: [
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.red[400]),
+                  ),
+                  Container(width: 15),
+                  Text("Account Information",
+                      style: MyText.subhead(context)!
+                          .copyWith(color: MyColors.grey_80))
+                ],
+              ),
+              Container(height: 20),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(2),
+                ),
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                elevation: 1,
+                margin: EdgeInsets.all(0),
+                child: Column(
                   children: [
                     Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.red[400]),
+                      height: 50,
+                      alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        maxLines: 1,
+                        controller: email,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(-12),
+                            border: InputBorder.none,
+                            hintText: "Email",
+                            hintStyle: MyText.body1(context)!
+                                .copyWith(color: MyColors.grey_40)),
+                      ),
                     ),
-                    Container(width: 15),
-                    Text("Account Information",
-                        style: MyText.subhead(context)!
-                            .copyWith(color: MyColors.grey_80))
+                    Divider(height: 0),
+                    Container(
+                      height: 50,
+                      alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        maxLines: 1,
+                        controller: username,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(-12),
+                            border: InputBorder.none,
+                            hintText: "Username",
+                            hintStyle: MyText.body1(context)!
+                                .copyWith(color: MyColors.grey_40)),
+                      ),
+                    ),
+                    Divider(height: 0),
+                    Container(
+                      height: 50,
+
+                      alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        maxLines: 1,
+                        obscureText: true,
+                        controller: password,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(-12),
+                            border: InputBorder.none,
+                            hintText: "Password",
+                            hintStyle: MyText.body1(context)!
+                                .copyWith(color: MyColors.grey_40)),
+                      ),
+                    ),
+                    Divider(height: 0),
+                    Container(
+                      height: 50,
+                      alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        maxLines: 1,
+                        obscureText: true,
+                        controller: retype_password,
+                        decoration: InputDecoration(
+
+                            contentPadding: EdgeInsets.all(-12),
+                            border: InputBorder.none,
+                            hintText: "Re-type Password",
+                            hintStyle: MyText.body1(context)!
+                                .copyWith(color: MyColors.grey_40)),
+                      ),
+                    ),
+                    Divider(height: 0),
+                    Container(
+                      height: 50,
+                      alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        maxLines: 1,
+                        controller: phone,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(-12),
+                            border: InputBorder.none,
+                            hintText: "Phone",
+                            hintStyle: MyText.body1(context)!
+                                .copyWith(color: MyColors.grey_40)),
+                      ),
+                    ),
                   ],
                 ),
-                Container(height: 20),
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(2),
+              ),
+              Container(height: 25),
+              Row(
+                children: [
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.red[400]),
                   ),
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  elevation: 1,
-                  margin: EdgeInsets.all(0),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 50,
-                        alignment: Alignment.centerLeft,
-                        padding: EdgeInsets.symmetric(horizontal: 30),
-                        child: TextField(
-                          maxLines: 1,
-                          controller: email,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(-12),
-                              border: InputBorder.none,
-                              hintText: "Email",
-                              hintStyle: MyText.body1(context)!
-                                  .copyWith(color: MyColors.grey_40)),
-                        ),
-                      ),
-                      Divider(height: 0),
-                      Container(
-                        height: 50,
-                        alignment: Alignment.centerLeft,
-                        padding: EdgeInsets.symmetric(horizontal: 30),
-                        child: TextField(
-                          maxLines: 1,
-                          controller: username,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(-12),
-                              border: InputBorder.none,
-                              hintText: "Username",
-                              hintStyle: MyText.body1(context)!
-                                  .copyWith(color: MyColors.grey_40)),
-                        ),
-                      ),
-                      Divider(height: 0),
-                      Container(
-                        height: 50,
-
-                        alignment: Alignment.centerLeft,
-                        padding: EdgeInsets.symmetric(horizontal: 30),
-                        child: TextField(
-                          maxLines: 1,
-                          obscureText: true,
-                          controller: password,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(-12),
-                              border: InputBorder.none,
-                              hintText: "Password",
-                              hintStyle: MyText.body1(context)!
-                                  .copyWith(color: MyColors.grey_40)),
-                        ),
-                      ),
-                      Divider(height: 0),
-                      Container(
-                        height: 50,
-                        alignment: Alignment.centerLeft,
-                        padding: EdgeInsets.symmetric(horizontal: 30),
-                        child: TextField(
-                          maxLines: 1,
-                          obscureText: true,
-                          controller: retype_password,
-                          decoration: InputDecoration(
-
-                              contentPadding: EdgeInsets.all(-12),
-                              border: InputBorder.none,
-                              hintText: "Re-type Password",
-                              hintStyle: MyText.body1(context)!
-                                  .copyWith(color: MyColors.grey_40)),
-                        ),
-                      ),
-                      Divider(height: 0),
-                      Container(
-                        height: 50,
-                        alignment: Alignment.centerLeft,
-                        padding: EdgeInsets.symmetric(horizontal: 30),
-                        child: TextField(
-                          maxLines: 1,
-                          controller: phone,
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(-12),
-                              border: InputBorder.none,
-                              hintText: "Phone",
-                              hintStyle: MyText.body1(context)!
-                                  .copyWith(color: MyColors.grey_40)),
-                        ),
-                      ),
-                    ],
-                  ),
+                  Container(width: 15),
+                  Text("Store Information",
+                      style: MyText.subhead(context)!
+                          .copyWith(color: MyColors.grey_80))
+                ],
+              ),
+              Container(height: 20),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(2),
                 ),
-                Container(height: 25),
-                Row(
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                elevation: 1,
+                margin: EdgeInsets.all(0),
+                child: Column(
                   children: [
                     Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.red[400]),
-                    ),
-                    Container(width: 15),
-                    Text("Store Information",
-                        style: MyText.subhead(context)!
-                            .copyWith(color: MyColors.grey_80))
-                  ],
-                ),
-                Container(height: 20),
-                Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(2),
-                  ),
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  elevation: 1,
-                  margin: EdgeInsets.all(0),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 50,
-                        alignment: Alignment.centerLeft,
-                        padding: EdgeInsets.symmetric(horizontal: 30),
-                        child: TextField(
-                          maxLines: 1,
-                          controller: storename,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.all(-12),
-                              border: InputBorder.none,
-                              hintText: "Store Name",
-                              hintStyle: MyText.body1(context)!
-                                  .copyWith(color: MyColors.grey_40)),
-                        ),
+                      height: 50,
+                      alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.symmetric(horizontal: 30),
+                      child: TextField(
+                        maxLines: 1,
+                        controller: storename,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(-12),
+                            border: InputBorder.none,
+                            hintText: "Store Name",
+                            hintStyle: MyText.body1(context)!
+                                .copyWith(color: MyColors.grey_40)),
                       ),
-                      Divider(height: 0),
-                      Container(
-                        height: 50,
-                        alignment: Alignment.centerLeft,
-                        padding: EdgeInsets.symmetric(horizontal: 15),
-                        child: Row(
-                          children: <Widget>[
-                            Container(width: 15),
-                            Expanded(
-                              child: TextField(
-                                maxLines: 1,
-                                controller: storelocation,
-                                decoration: InputDecoration(
-                                    contentPadding: EdgeInsets.all(-12),
-                                    border: InputBorder.none,
-                                    hintText: "Store Location",
-                                    hintStyle: MyText.body1(context)!
-                                        .copyWith(color: MyColors.grey_40)),
-                              ),
+                    ),
+                    Divider(height: 0),
+                    Container(
+                      height: 50,
+                      alignment: Alignment.centerLeft,
+                      padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        children: <Widget>[
+                          Container(width: 15),
+                          Expanded(
+                            child: TextField(
+                              maxLines: 1,
+                              controller: storelocation,
+                              decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.all(-12),
+                                  border: InputBorder.none,
+                                  hintText: "Store Location",
+                                  hintStyle: MyText.body1(context)!
+                                      .copyWith(color: MyColors.grey_40)),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                ),
-                Container(height: 25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Already have an account? ",
-                        style: MyText.subhead(context)!
-                            .copyWith(color: MyColors.grey_60)),
-                    InkWell(
-                      onTap: () {
-                        Get.off(() => LoginPage());
-                      },
-                      child: Text("Sign In",
-                          style: MyText.subhead(context)!.copyWith(
-                              color: Colors.teal, fontWeight: FontWeight.bold)),
-                    )
+                    ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              Container(height: 25),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Already have an account? ",
+                      style: MyText.subhead(context)!
+                          .copyWith(color: MyColors.grey_60)),
+                  InkWell(
+                    onTap: () {
+                      Get.off(() => LoginPage());
+                    },
+                    child: Text("Sign In",
+                        style: MyText.subhead(context)!.copyWith(
+                            color: Colors.teal, fontWeight: FontWeight.bold)),
+                  )
+                ],
+              ),
+            ],
           ),
         ),
       ),

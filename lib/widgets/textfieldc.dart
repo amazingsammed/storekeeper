@@ -3,14 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CustomTextfield extends StatelessWidget {
-  String label;
-  TextInputType? keyboardtype;
-  Function(String)? onChange;
+  final String label;
+ final TextInputType? keyboardtype;
+final  Function(String)? onChange;
 
-  TextEditingController? controller;
+final  TextEditingController? controller;
   CustomTextfield(
-      {Key? key, required this.label, this.controller, this.keyboardtype,this.onChange})
-      : super(key: key);
+      {super.key, required this.label, this.controller, this.keyboardtype,this.onChange});
 
   @override
   Widget build(BuildContext context) {

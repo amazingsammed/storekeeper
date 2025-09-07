@@ -9,8 +9,8 @@ import '../../models/item_model.dart';
 import '../../widgets/containers.dart';
 
 class DeletePage extends StatelessWidget {
-  MyStore _myStore = Get.put(MyStore());
-  DeletePage({Key? key}) : super(key: key);
+ final MyStore _myStore = Get.put(MyStore());
+  DeletePage({super.key});
 
   @override
   Widget build(BuildContext context) {

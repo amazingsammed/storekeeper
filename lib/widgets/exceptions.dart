@@ -53,8 +53,8 @@ Future<String> getImageAndSave({required bool gallery}) async {
 }
 
 class NoItem extends StatelessWidget {
-  String title;
-  NoItem({Key? key, required this.title}) : super(key: key);
+  final String title;
+  const NoItem({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

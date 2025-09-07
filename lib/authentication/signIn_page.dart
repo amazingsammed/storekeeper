@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import '../pages/cart_page.dart';
 
 class LoginPage extends StatelessWidget {
-  TextEditingController email = TextEditingController();
-  TextEditingController username = TextEditingController();
-  TextEditingController password = TextEditingController();
+ final TextEditingController email = TextEditingController();
+final  TextEditingController username = TextEditingController();
+final  TextEditingController password = TextEditingController();
   LoginPage({super.key});
 
   @override

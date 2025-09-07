@@ -21,7 +21,7 @@ class MyStore extends Dbhelper {
   }
 
   void Searchtile(String query) {
-    if(query.trim().characters.length != 0){
+    if(query.trim().characters.isNotEmpty){
     final abc =
     items.where((element) => sam(element.name, query)).toList();
     searchtiles.value = abc.obs;}else{

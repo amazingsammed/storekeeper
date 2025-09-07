@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContainerWithIconCentered extends StatelessWidget {
-  IconData icon;
-  Color bgColor;
-  Function()? ontap;
-  ContainerWithIconCentered(
+  final IconData icon;
+ final Color bgColor;
+ final Function()? ontap;
+  const ContainerWithIconCentered(
       {Key? key, required this.icon, required this.bgColor, this.ontap})
       : super(key: key);
 
@@ -31,20 +31,19 @@ class ContainerWithIconCentered extends StatelessWidget {
 }
 
 class ContainerWithTextCentered extends StatelessWidget {
-  String text;
-  Function()? ontap;
-  double? height;
-  double? width;
+final  String text;
+final  Function()? ontap;
+final  double? height;
+final  double? width;
 
-  Color? bgColor;
-  ContainerWithTextCentered(
-      {Key? key,
+ final Color? bgColor;
+  const ContainerWithTextCentered(
+      {super.key,
       required this.text,
       this.bgColor = Colors.purple,
       this.ontap,
       this.height = 50,
-      this.width})
-      : super(key: key);
+      this.width});
 
   @override
   Widget build(BuildContext context) {

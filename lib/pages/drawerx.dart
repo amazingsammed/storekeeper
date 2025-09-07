@@ -97,9 +97,9 @@ class MyDrawer extends StatelessWidget {
 }
 
 class DrawerXtile extends StatelessWidget {
-  String title;
-  Function()? onTap;
-  DrawerXtile({Key? key, required this.title,this.onTap}) : super(key: key);
+ final String title;
+ final Function()? onTap;
+  const DrawerXtile({super.key, required this.title,this.onTap});
 
   @override
   Widget build(BuildContext context) {

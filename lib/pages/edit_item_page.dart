@@ -16,7 +16,7 @@ class EditItemPage extends StatelessWidget {
   TextEditingController avaliable = TextEditingController();
   MyStore provider = Get.find();
   ItemClass item;
-  EditItemPage({Key? key, required this.item}) : super(key: key);
+  EditItemPage({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {

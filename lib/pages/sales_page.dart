@@ -11,10 +11,10 @@ import '../models/sales_model.dart';
 import '../widgets/exceptions.dart';
 
 class SalesPage extends StatelessWidget {
-  MasterController controller = Get.put(MasterController());
-  MyStore _myStore = Get.put(MyStore());
+ final MasterController controller = Get.put(MasterController());
+ final MyStore _myStore = Get.put(MyStore());
 
-  SalesPage({Key? key}) : super(key: key);
+  SalesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -194,16 +194,16 @@ class SalesPage extends StatelessWidget {
 }
 
 class SalesTile extends StatelessWidget {
-  String name;
-  String price;
-  String image;
-  String total;
-  String avaliable;
-  Function()? ontap;
-  Function()? onhold;
-  Color tilecolor;
+final  String name;
+final  String price;
+ final String image;
+ final String total;
+ final String avaliable;
+ final Function()? ontap;
+ final Function()? onhold;
+ final Color tilecolor;
 
-  SalesTile(
+  const SalesTile(
       {Key? key,
       required this.image,
       required this.avaliable,
